@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>
+                Personal Information
+            </legend>
+
+            <label for ="fullName">Full Name : </label>
+
+            <input type="text" id="fullName" name="Full Name" placeholder="Type your name">
+            <br><br>
+
+            <label for="Email"> Email</label>
+            <input type="email" id="Email" name="Email">
+            <br><br>
+
+            <label for="password">Password</label>
+            <input type="Password" id="password" name="Password">
+            <br><br>
+
+            <label for="website">Website</label>
+            <input type="url" id="website" name="Website">
+            <br><br>
+        </fieldset>
+
+        <br>
+
+         <fieldset>
+            <legend>
+                Additional Information
+            </legend>
+
+            <label for ="DOB">D.O.B</label>
+
+            <input type="date" id="DOB" name="DOB" min="1989-07-07" max="2007-10-02">
+            <br><br>
+
+            <label for="Years of Experience"> Years of Experience
+            </label>
+            <input type="number" id="Years of Experience" name="Years of Experience" min="0" max="10">
+            <br><br>
+
+            <label for="password">Password</label>
+            <input type="Password" id="password" name="Password">
+            <br><br>
+
+            <label for="skills">Skills</label>
+            <input type="range" id="skill" min="1" max="100" value="70">
+            <br><br>
+
+            <label for="bio">Short Bio : </label>
+            <br>
+            <textarea name="Bio" id="bio"></textarea>
+            <br>
+
+            <p>Gender : </p>
+
+            <label for="Male">Male</label>
+            <input type="radio" id="Male" name="gender">
+
+            <label for="Female">Female</label>
+            <input type="radio" id="Female" name="gender">
+
+            <label for="Others">Others</label>
+            <input type="radio" id="Others" name="gender">
+
+            <br>
+
+            <p>Country : </p>
+            <select name="" id="cn">
+                <option value="Choose">Please choose an option</option>
+                <option value="IN">India</option>
+                <option value="US">USA</option>
+            </select>
+
+        </fieldset>
+
+        <br>
+
+        <!-- <input type="button"> -->
+        
+        <button type="submit">Submit</button>
+        
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+
+</html>

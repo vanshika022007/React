@@ -1,0 +1,10 @@
+/* After first layer there are 3 layers, 1st layer is the content, 2nd layer is padding, 3rd layer is border, 4th layer is margin(box model) */
+
+/* Normal styling is box model */
+
+ /* flexbox, react, docs, docs.python.org, tailwind.css, fabicon */
+
+h1{
+    background-color: red;
+    border: 7px dashed blue;
+}

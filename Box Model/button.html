@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: rgb(36, 2, 67);
+            padding: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: none;
+            color: white;
+        }
+        button:Hover{
+            background-color: green;
+        }
+
+        p::selection{
+            background-color: pink;
+        }
+
+        p::after{
+            content:"!";
+        }
+
+        input:focus{
+            outline: 1px solid blue;
+            border: 1px;
+        }
+    </style>
+</head>
+<body>
+    <button>Generate</button>
+    <p>Hello</p>
+    <input type="text">
+</body>
+</html>

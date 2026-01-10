@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SnapGrid - Social Media</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #fafafa;
+      color: #333;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: 8px;
+    }
+    /* Navbar */
+    .navbar {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e60023; /* Pinterest red */
+    }
+    .navbar nav a {
+      margin-left: 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #555;
+      transition: color 0.3s ease;
+    }
+    .navbar nav a:hover {
+      color: #e60023;
+    }
+    /* Stories */
+    .stories {
+      background: #fff;
+      padding: 10px 15px;
+      display: flex;
+      overflow-x: auto;
+      border-bottom: 1px solid #ddd;
+    }
+    .story {
+      flex: 0 0 auto;
+      margin-right: 12px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .story img {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #e60023;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+    .story span {
+      font-size: 0.8rem;
+      color: #555;
+    }
+    /* Posts Grid */
+    .posts {
+      max-width: 1200px;
+      margin: 20px auto;
+      column-count: 4;
+      column-gap: 15px;
+    }
+    @media (max-width: 1024px) {
+      .posts {
+        column-count: 3;
+      }
+    }
+    @media (max-width: 768px) {
+      .posts {
+        column-count: 2;
+      }
+    }
+    @media (max-width: 480px) {
+      .posts {
+        column-count: 1;
+      }
+    }
+    .post {
+      break-inside: avoid;
+      background: #fff;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(230, 0, 35, 0.3);
+    }
+    .post img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    .post-content {
+      padding: 15px 10px;
+    }
+    .post-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #e60023;
+    }
+    .post-content p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    .post-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+    }
+    .user-info img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 8px;
+      object-fit: cover;
+    }
+    .user-info span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+    }
+    .post-actions {
+      font-size: 0.9rem;
+      color: #e60023;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SnapGrid</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Explore</a>
+      <a href="#">Profile</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="stories" aria-label="Stories Section">
+    <div class="story" tabindex="0">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Story by Anna" />
+      <span>Anna</span>
+    </div>
+    <div class="story" tabindex="0">
+      <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Story by John" />
+      <span>John</span>
+    </div>
+    <div class="story" tabindex="0">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Story by Emma" />
+      <span>Emma</span>
+    </div>
+    <div class="story" tabindex="0">
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Story by Michael" />
+      <span>Michael</span>
+    </div>
+    <div class="story" tabindex="0">
+      <img src="https://randomuser.me/api/portraits/women/88.jpg" alt="Story by Julia" />
+      <span>Julia</span>
+    </div>
+  </section>
+
+  <main class="posts" aria-label="Posts Grid">
+    <article class="post" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Lifestyle product photo of vintage camera" />
+      <div class="post-content">
+        <h3>Vintage Camera</h3>
+        <p>Classic retro camera style for photography lovers.</p>
+        <div class="post-footer">
+          <div class="user-info">
+            <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="User avatar" />
+            <span>David</span>
+          </div>
+          <div class="post-actions">❤ 124</div>
+        </div>
+      </div>
+    </article>
+    
+    <article class="post" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Lifestyle photo of cozy living room" />
+      <div class="post-content">
+        <h3>Cozy Living Room</h3>
+        <p>Warm and welcoming interior design inspiration.</p>
+        <div class="post-footer">
+          <div class="user-info">
+            <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="User avatar" />
+            <span>Julia</span>
+          </div>
+          <div class="post-actions">❤ 98</div>
+        </div>
+      </div>
+    </article>
+    
+    <article class="post" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=600&q=80" alt="Lifestyle fashion photo featuring sneakers and outfit" />
+      <div class="post-content">
+        <h3>Street Style Sneakers</h3>
+        <p>Casual outfit with trendy sneakers for everyday wear.</p>
+        <div class="post-footer">
+          <div class="user-info">
+            <img src="https://randomuser.me/api/portraits/men/88.jpg" alt="User avatar" />
+            <span>Mark</span>
+          </div>
+          <div class="post-actions">❤ 172</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="post" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Delicious homemade desserts on table" />
+      <div class="post-content">
+        <h3>Homemade Desserts</h3>
+        <p>Sweet treats made with love and fresh ingredients.</p>
+        <div class="post-footer">
+          <div class="user-info">
+            <img src="https://randomuser.me/api/portraits/women/34.jpg" alt="User avatar" />
+            <span>Emily</span>
+          </div>
+          <div class="post-actions">❤ 201</div>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

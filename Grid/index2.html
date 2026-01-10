@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-areas: "box1 box2 box3"
+                           "box4 box5 box3";
+      gap: 20px;
+    }
+    .parent div{
+      height: 200px;
+      width: 100px;
+      background-color: rebeccapurple;
+    }
+    #b1{
+      grid-area: box1;
+    }
+    #b2{
+      grid-area: box2;
+    }#b3{
+      grid-area: box3;
+    }#b4{
+      grid-area: box4;
+    }#b5{
+      grid-area: box5;
+    }
+ 
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div id="b1">box1</div>
+    <div id="b2">box2</div>
+    <div id="b3">box3</div>
+    <div id="b4">box4</div>
+    <div id="b5">box5</div>
+  </div>
+</body>
+</html>

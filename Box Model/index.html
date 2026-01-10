@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 150px;
+            width: 300px;
+            color: violet;
+            background-color: aqua;
+            /* padding: 20px; */
+            /* padding: 10px 20px 30px 40px; */
+
+
+            padding: 10px 20px 30px;
+
+            /* 20 px is for both right and left as what is there in rght is replicated on left, same for 2 top and bottom for first and second one in right and left */
+
+
+            /* box-sizing is to help us not taking external area and do padding  within our height and width */
+            box-sizing: border-box;
+            border: 5px solid blueviolet;
+        }
+
+        #box1{
+                color: aquamarine;
+                height: 150px;
+                width: 300px;
+                background-color: blueviolet;
+                /* margin: 20px; */
+                /* same as padding */
+                /* margin: 20px 30px; */
+                /* margin: 20px 30px 20px; */
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-right: 30px;
+                margin-left: 30px;
+
+                border: 5px solid violet;;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>
+            This is padding.
+        </h2>
+    </div>
+
+    <div id="box1">
+        <h2>This is margin.</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            /* transition-duration: 3s;
+            transition-property: all;
+            transition-timing-function: ease-in;
+            transition-delay: 0.5s; */
+            transition:all 3s ease-in-out 0.5s;
+        }
+
+        .box:hover{
+            background-color: aqua;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

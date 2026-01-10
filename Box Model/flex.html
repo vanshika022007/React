@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        body{
+            display: flex;
+            /* main-axis: column and cross-axis: row, by default its opposite */
+            flex-direction: column;
+        }
+        h2{
+            height: 50px;
+            width: 180px;
+            background-color: aqua;
+            /* gives both the properties of inline as well as block, it is given directly to child not to parent but flex is given t parent child and is applied only to direct childs*/
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        p{
+            height: 50px;
+            width: 180px;
+            background-color: aqua;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        /* inline element so height andwidth do not change */
+        span{
+            height: 50px;
+            width: 180px;
+            background-color: aqua;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        /* it is block as well as inline element as it follows the property of both height nd width apply but allowtext in its side*/
+        img{
+            height: 150px;
+            width: 150px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>I am aheading.</h2>
+    <p>I am paragraph.</p>
+    <span>I am span 1.</span>
+    <span>I am span 2.</span>
+    <img src="/css.png" alt="CSS">
+</body>
+</html>

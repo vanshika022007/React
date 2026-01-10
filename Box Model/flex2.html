@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .outer{
+            height: 700px;
+            width: auto;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            /* apllied on main axis */
+            /* justify-content: end; */
+            justify-content: space-between;
+            /* align-items: center; */
+            align-items: flex-end;
+        }
+
+        .inner{
+            height: 200px;
+            width: 200px;
+            background-color: plum;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <!-- div.inner*4 -->
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+        <div class="inner">4</div>
+    </div>
+</body>
+</html>
